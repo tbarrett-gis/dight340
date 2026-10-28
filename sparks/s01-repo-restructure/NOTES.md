@@ -1,16 +1,16 @@
 # NOTES — S01 · Repo restructure
 
 ## Intent
-This new repo has been initialized to marry the old (now archived) exercises and reflections, while pivoting to new class curriculum. Older material can be found now in `/Users/thomas/Documents/VSCode/DIGHT_340/dight340-exercises/archive` while newer material (sparks, prototypes, final project) can be more easily viewed in the root. 
+This new repo has been initialized to marry the old (now archived) exercises and reflections, while pivoting to new class curriculum. Older material can be found now in `tbarrett-gis.github.io/dight340/dight340-exercises/archive` while newer material (sparks, prototypes, final project) can be more easily viewed in the root.
 
 ## AI use
-I used AI to completely initialize this repo, as per the instructions online (download the zip, bring it into the repo, run through the steps, conduct intervalled commits). Used Claude Code in the terminal (2.1.312 (Claude Code)).
+I used AI to completely initialize this repo, as per the instructions online (download the zip, bring it into the repo, run through the steps, conduct intervalled commits). Used Claude Code in the terminal (2.1.312 (Claude Code)) and initially pasted the instructions given on the spark webpage to set this all up, which itself used the material inside the zip to complete the task, with my input over 10 steps.
 
 ## Accepted / changed / rejected
-Because this spark was set up to be a "follow the agent" to reset the repo, all new material as accepted as per the instructions. Where I had additional questions, Claude was used to address the aside, but none of them clashed with the setup of the repo or assignment.
+Because this spark was set up to be a "follow the agent" to reset the repo, all new material as accepted as per the instructions. Where I had additional questions, Claude was used to address the aside, but none of them clashed with the setup of the repo or assignment (for example, I had Claude verify its work a couple of times, and especially after I picked up on a stray DS_Store file in the webpage... which embrassingly, I came to realize that it was because I had just opened the index.html in my browser, and that it was sourcing what was local to my computer). 
 
 ## Dig deeper
-One thing I looked up (MDN link) and what I learned. I will fill this out after reading another article on repo structure and organization, etc.
+I actually looked at a few different MDN articles, mostly because I knew the content but wanted clarification on some of the material or to get another perspective on best practices. For example, I read `https://git-scm.com/docs/git-diff#Documentation/git-diff.txt--Mltngt` for a couple quick questions on how certain Git commands actually work and what's happening behind the scenes when I run commands through the desktop app (I have previously run Git commands in the terminal, so I was curious about what we've been doing). I also read a brief article (`https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files`) on how to deal with files, which is something I've done for years, and yet am still finding certain things that I wish I would've know earlier (some format of drives and file contents display differently by webpage because they are case-sensitive, how to use different naming conventions, what the tree of a folder should look like, etc.). I treated this is an opening teaser in conjunction with file organization (which has been the subject of this spark).
 
 ## Open questions
-This may be the only time I can say this, but this made perfect sense to me, given that reorganizing a repo upon direction from Claude is something I've done countless times before. Perhaps the only open question I have is... [fill in later]
+This may be the only time I can say this, but this made perfect sense to me, given that reorganizing a repo upon direction from Claude is something I've done countless times before. One open question I did have from the start was about how we were going to restructure the page to host archived material, if I needed to upload new links to LearningSuite, and anticipated having to ask Claude until I realized you had built it into the zipped instructions after coming up in the chat. I will have more to come soon!
