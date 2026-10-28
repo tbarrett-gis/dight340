@@ -1,6 +1,8 @@
-# Declaration of AI Use, by Exercise
+# DECLARATION OF AI USE, BY EXERCISE
+
 
 ## Exercise 2: No AI Usage in Exercise 2
+
 
 ## Exercise 3
 
@@ -17,6 +19,7 @@
 
 **Changed/Rejected:** Claude initially suggested I use a `.push()`/array approach, which I didn't use. After providing some explanation, I consulted MDN and critiqued Caldue's suggestions. Built the report with a `let` string and `+=` instead, and summed raw averages into a `classTotal` variable. I typed all code myself.
 
+
 ## Exercise 4
 
 **Tool:** Anthropic Claude (Claude Code, Opus 5.5). Instructed not to write my code, only to explain and help me find and fix syntax.
@@ -31,3 +34,19 @@
 **Used for:** Fixing a `MODULE_NOT_FOUND` error (I was running node from the ex03 folder instead of ex04). Learning parameters vs. arguments and how to call a function with one Pokémon by index (`party[1]`); why `party.moves` was undefined (`party` is the whole array, not one Pokémon); using spread to copy the moves array and then the Pokémon object so the original stays unchanged; why my `console.log` never ran (it came after `return`). Understanding destructuring with a default inside `describe`'s parameter list, and that `describe` was defined but never called. Learning that `Object.entries` needs one object, not `party` or a bare `moves`, and how `[key, value]` destructures each pair. Final check of my work against the requirements.
 
 **Changed/Rejected:** I implemented some syntax after watching Claude introduce proper implementation in a different context, took several suggestions mentioned in the used for section, and then referenced MDN for anything else it mentioned that I didn't understand.
+
+
+## Exercise 5
+
+**Tool:** Anthropic Claude (Claude Code, Opus 5.5). Instructed not to write my code, only to explain and help me find and fix syntax.
+
+**Prompts:**
+- "I'm having a hard time determining how, in an internal loop, to make it print out two different things based on if a nickname exists. I stumbled across Object.hasOwn on MDN but my syntax seems to be off... Help me also debug SyntaxError: Unexpected identifier 'Object' which is printing in the terminal."
+- "It is printing a [] and I can't figure out why... can you give me any hints on what is wrong with the syntax? Explain conceptually."
+- "I am almost done, but can't seem to figure out what is syntactically wrong with step 3, read it and tell me what syntax is breaking this..."
+- "Explain this conceptually first bc I have no idea what [makeLevelCheck] even means. For step 4, which is supposed to have a min level? I don't understand the meaning of the instructions."
+- "I got nothing but [Function (anonymous)] in the output, what does this mean and what is syntactically wrong?"
+
+**Used for:** I wrote all the code first and heavily drew on MDN and the slides. Where I was deficient (always in understanding how to structure the syntax and logic), I would consult Claude. Ex. Calude helped me fix `if` syntax (missing parentheses, `=` vs. comparison), learning that `map` passes `(element, index, array)` and not separate properties, and that a missing `nickname` is falsy so `if (character.nickname)` works without `Object.hasOwn`, etc. 
+
+**Changed/Rejected:** I was able to write the code for all steps, though the only step that I didn't need help (first try!) debugging was step 5. Implemented all bug fixes that Claude helped me understand what was going wrong.
