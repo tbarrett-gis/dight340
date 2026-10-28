@@ -1,61 +1,57 @@
-// Ex 3 starter — this works. It also repeats itself. Fix that.
+// Ex 3 completed — this is refactored but still works.
 const output = document.getElementById("output");
 
-output.textContent += "DigHT 340 — Grade Report\n";
-output.textContent += "------------------------\n";
+// Class Scores by Person
+const record = [
+  { name: "Ada", score1: 94, score2: 88, score3: 92 },
+  { name: "Grace", score1: 78, score2: 85, score3: 81 },
+  { name: "Alan", score1: 72, score2: 65, score3: 69 },
+]
 
-// Student 1
-const name1 = "Ada";
-const average1 = Math.round(((94 + 88 + 92) / 3) * 10) / 10;
-let letter1;
-if (average1 >= 90) {
-  letter1 = "A";
-} else if (average1 >= 80) {
-  letter1 = "B";
-} else if (average1 >= 70) {
-  letter1 = "C";
-} else if (average1 >= 60) {
-  letter1 = "D";
-} else {
-  letter1 = "F";
+// Averaging Function (Declaration)
+function avg(a, b, c) {
+  const average = ((a + b + c) / 3);
+  return average;
 }
-output.textContent += `${name1}: ${average1} (${letter1})\n`;
 
-// Student 2
-const name2 = "Grace";
-const average2 = Math.round(((78 + 85 + 81) / 3) * 10) / 10;
-let letter2;
-if (average2 >= 90) {
-  letter2 = "A";
-} else if (average2 >= 80) {
-  letter2 = "B";
-} else if (average2 >= 70) {
-  letter2 = "C";
-} else if (average2 >= 60) {
-  letter2 = "D";
-} else {
-  letter2 = "F";
-}
-output.textContent += `${name2}: ${average2} (${letter2})\n`;
+// Rounding Function (Function Expression)
+const rnd = function (value, places = 1) {
+  return Math.round((value) * 10 ** places) / 10 ** places;
+};
 
-// Student 3
-const name3 = "Alan";
-const average3 = Math.round(((72 + 65 + 69) / 3) * 10) / 10;
-if (average3 >= 90) {
-  var letter3 = "A";
-} else if (average3 >= 80) {
-  var letter3 = "B";
-} else if (average3 >= 70) {
-  var letter3 = "C";
-} else if (average3 >= 60) {
-  var letter3 = "D";
-} else {
-  var letter3 = "F";
+// Letter Assignment Function (Declaration)
+function ltr(rounded) {
+  if (rounded >= 90) {
+    return "A";
+  } else if (rounded >= 80) {
+    return "B";
+  } else if (rounded >= 70) {
+    return "C";
+  } else if (rounded >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
 }
-output.textContent += `${name3}: ${average3} (${letter3})\n`;
+
+// Format Function (Arrows)
+const frmt = (averaged, rounded, graded) => `${averaged}: ${rounded} (${graded})\n`;
+
+// Final Printout
+let lines = "DigHT 340 — Grade Report\n------------------------\n";
+let classTotal = 0;
+
+for (const details of record) {
+  const n = details.name;
+  const a = avg(details.score1, details.score2, details.score3); // holds the averaged score
+  const r = rnd(a); // passes the averaged number into the rounder
+  const g = ltr(r); // calls the rounded number and generates the letter
+  lines += frmt(n, r, g);
+  classTotal += a;
+}
 
 // Whole class
-const classAverage =
-  Math.round(((94 + 88 + 92 + 78 + 85 + 81 + 72 + 65 + 69) / 9) * 100) / 100;
-output.textContent += "------------------------\n";
-output.textContent += `Class average: ${classAverage}\n`;
+const classAverage = rnd(classTotal / 3, 2);
+lines += "------------------------\n";
+lines += `Class average: ${classAverage}\n`;
+output.textContent = lines
