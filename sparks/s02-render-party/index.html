@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S02 · Render the Party — DIGHT 340</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    body {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    #party li {
+      margin-block: 0.75rem;
+    }
+    button {
+      font: inherit;
+      margin-inline-end: 0.5rem;
+    }
+    /* Keep focus clearly visible. currentColor = the text color,
+       so it has strong contrast in light and dark mode. */
+    :focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 2px;
+    }
+  </style>
+  <script defer src="party.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Render the Party</h1>
+    <p><a href="../../">Back to the hub</a></p>
+  </header>
+
+  <main>
+    <!-- tabindex="-1": code can focus this heading, but Tab skips it. -->
+    <h2 id="party-heading" tabindex="-1">Your party</h2>
+
+    <!-- Empty on purpose: party.js builds the list from the array. -->
+    <ul id="party" aria-labelledby="party-heading"></ul>
+
+    <p id="empty-message" hidden>Your party is empty.</p>
+
+    <!-- role="status": screen readers announce changes to this text. -->
+    <p id="status" role="status"></p>
+  </main>
+
+  <footer>
+    <p>DIGHT 340 · Spark 2</p>
+  </footer>
+</body>
+</html>
