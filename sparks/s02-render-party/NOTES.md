@@ -67,3 +67,29 @@ To which I responded that it initially renders `<em>Doug</em>` on the page, but 
 
 ## Open Questions
 Is there a specific benefit to rebuilding every button upon `render()` which is the default? Isn't this what we also discussed about Svelte that it can manage to update just one feature instead of all (or is that something else)? and is there a place that you would want to re-render the whole thing or just an element, and is there a way to do that in vanilla js?
+
+## /Check Results (sparks/s02-render-party)
+
+### NOTES.md
+- ✅ Title names the assignment (S02)
+- ✅ All five sections present, no template text left
+- ✅ No `TODO(human)` markers left in the code
+- ✅ AI use names the tool and quotes a real prompt
+- ✅ Accepted / changed / rejected includes the TODO(human) code and why
+- ✅ Dig deeper includes an MDN link
+
+### Done Requirements
+- ✅ index.html + party.js loaded with `defer`
+- ✅ Party is an array of objects; the list is built from it, nothing hard-coded
+- ✅ Each member has real `<button>`s (Level up, Remove); mouse + Tab/Enter/Space
+- ✅ Visible text changes (level number + status message)
+- ✅ Focus stays visible; after a remove it moves to the next Remove button, or the heading when the party is empty
+- ✅ No console errors; `const`/`let` and `===` only
+- ✅ Hub index.html links to it under Sparks
+- ✅ Committed (5a9698c), pushed, live at https://tbarrett-gis.github.io/dight340/sparks/s02-render-party/
+
+### Accessibility Basics
+- ✅ header/main/footer landmarks; h1 → h2 heading order
+- ✅ Real buttons with distinct names; visible :focus-visible outline
+- ✅ role="status" announces changes to screen readers
+- ✅ rem-based layout, no fixed px sizes (OK at 200% zoom)
